@@ -24,6 +24,8 @@ import SampleCreate from "./uiComponentsSample/SampleCreate";
 import SampleSearch from "./uiComponentsSample/SampleSearch";
 import SampleInbox from "./uiComponentsSample/SampleInbox";
 import SampleView from "./uiComponentsSample/SampleView";
+import MyCreate from "./mypages/examplepage";
+import MyAssign from "./mypages/assignment";
 
 const SampleBreadCrumbs = ({ location }) => {
   const { t } = useTranslation();
@@ -74,9 +76,12 @@ const App = ({ path, stateCode, userType, tenants }) => {
         <PrivateRoute path={`${path}/search`} component={() => <SampleSearch />} />
         <PrivateRoute path={`${path}/inbox`} component={() => <SampleInbox />} />
         <PrivateRoute path={`${path}/view`} component={() => <SampleView />} />
+        
+        <PrivateRoute path={`${path}/mycreate`} component={() => <MyCreate />} />
+        <PrivateRoute path={`${path}/myassign`} component={() => <MyAssign />} />
       </AppContainer>
     </Switch>
   );
 };
 
-export default App;
+export default App;  

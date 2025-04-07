@@ -9,6 +9,9 @@ const HRMSCreate = () => {
   // Get the current tenant ID from DIGIT's ULB Service
   const tenantId = Digit.ULBService.getCurrentTenantId();
   
+  const defaultvalues={
+    applicantname: "",
+  }
   // State to manage toast notifications
   const [showToast, setShowToast] = useState(null);
   
@@ -69,7 +72,7 @@ const HRMSCreate = () => {
         config={newConfig.map((config) => ({
           ...config,
         }))}
-        defaultValues={{}} // Default values for form fields
+        defaultValues={defaultvalues} // Default values for form fields
         onFormValueChange={(setValue, formData, formState, reset, setError, clearErrors, trigger, getValues) => {
           console.log(formData, "formData"); // Debug log when form values change
         }}
