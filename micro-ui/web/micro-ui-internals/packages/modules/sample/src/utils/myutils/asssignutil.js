@@ -26,7 +26,6 @@ export const generateConfigFromSchema = (schema, isre = false) => {
     }
     else {
       switch (value.type) {
-        
         case 'string':
           configField.type = 'text';
           if (value.maxLength) configField.populators.validation.maxlength = value.maxLength;
