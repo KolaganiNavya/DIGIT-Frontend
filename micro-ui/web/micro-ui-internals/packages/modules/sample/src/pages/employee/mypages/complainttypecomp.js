@@ -14,7 +14,6 @@ const ComplaintType = ({ onSelect, ...props }) => {
     },
   ]);
 
-  // fn to update the value based on type. 
   const handleUpdateField = ({ type, value, item, index }) => {
     switch (type) {
       case "TYPE":
@@ -48,7 +47,6 @@ const ComplaintType = ({ onSelect, ...props }) => {
     }
   };
 
-  //fn to add more field
   const add = () => {
     setDocumentData((prev) => [
       ...prev,
@@ -59,7 +57,7 @@ const ComplaintType = ({ onSelect, ...props }) => {
       },
     ]);
   };
-  //fn to delete field
+  
   const deleteItem = (data) => {
     const fil = documentData.filter((i) => i.key !== data.key);
     const up = fil.map((item, index) => ({ ...item, key: index + 1 }));
