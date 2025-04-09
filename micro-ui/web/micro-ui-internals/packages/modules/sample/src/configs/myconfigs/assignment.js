@@ -34,18 +34,18 @@ export const asconfig = [
         ]
     },
     {
-        head:"COMPLAINT TYPE",
-        key:"complainttype",
+        head: "COMPLAINT TYPE",
+        key: "complainttype",
         body: [
             {
-              isMandatory: true,
-              key: "complainttype",
-              type: "component", // Custom component rendering
-              component: "TypeComponent",
-              withoutLabel: true,
-              disable: false,
-              customProps: {},
-              populators: { name: "complainttype", required: true },
+                isMandatory: true,
+                key: "complainttype",
+                type: "component", // Custom component rendering
+                component: "TypeComponent",
+                withoutLabel: true,
+                disable: false,
+                customProps: {},
+                populators: { name: "complainttype", required: true },
             },
         ],
     },

@@ -1,1 +1,84 @@
-
+export const schema = {
+    "type": "object",
+    "title": "Assignment.PGRAPPLY",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "required": [
+        "citizenMobileNumber",
+        "citizenName",
+        "complaintType",
+        "complaintLocation"
+    ],
+    "x-unique": [
+        "citizenMobileNumber"
+    ],
+    "properties": {
+        "citizenName": {
+            "type": "string",
+            "maxLength": 100,
+            "minLength": 5,
+            "description": "Citizen name must be between 5 and 100 characters."
+        },
+        "complaintType": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "required": [
+                    "code",
+                    "name"
+                ],
+                "properties": {
+                    "code": {
+                        "type": "string"
+                    },
+                    "name": {
+                        "type": "string"
+                    }
+                }
+            },
+            "minItems": 1,
+            "description": "List of complaint types with code and name."
+        },
+        "pictureUpload": {
+            "type": "object",
+            "properties": {
+                "type": {
+                    "enum": [
+                        "documentUpload"
+                    ],
+                    "type": "string"
+                }
+            },
+            "description": "Picture upload field, type must be 'documentUpload'."
+        },
+        "complaintLocation": {
+            "type": "object",
+            "required": [
+                "pincode",
+                "city",
+                "landmark",
+                "address"
+            ],
+            "properties": {
+                "city": {
+                    "type": "string"
+                },
+                "address": {
+                    "type": "string"
+                },
+                "pincode": {
+                    "type": "number"
+                },
+                "landmark": {
+                    "type": "string"
+                }
+            },
+            "description": "Details of the complaint location."
+        },
+        "citizenMobileNumber": {
+            "type": "number",
+            "pattern": "^\\d{10}$",
+            "description": "Citizen mobile number must be a 10-digit number."
+        }
+    },
+    "additionalProperties": false
+};

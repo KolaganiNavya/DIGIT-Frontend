@@ -68,7 +68,7 @@ const ComplaintType = ({ onSelect, ...props }) => {
 
   // when doc update calling onselect for update the value in formdata
   useEffect(() => {
-    onSelect("complainttype", documentData);
+    onSelect("complaintType", documentData);
   }, [documentData]);
   
   return (

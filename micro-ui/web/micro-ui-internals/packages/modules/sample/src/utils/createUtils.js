@@ -182,7 +182,7 @@ export const transformASSIGNdata = (data) => {
                     "isStepper": true
                 },
                 "complaintType": 
-                    data.complainttype.map(item => ({
+                    data.complaintType.map(item => ({
                         code: item.code,
                         name: item.names
                       }))
@@ -195,7 +195,7 @@ export const transformASSIGNdata = (data) => {
                 },
                 "citizenName": data.citizenName,
                 "pictureUpload": {
-                    "type": data.docupload.name,
+                    "type": data.type.name,
                 },
                 "citizenMobileNumber": parseInt(data.citizenMobileNumber),
             },
