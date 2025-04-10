@@ -40,7 +40,7 @@ export const generateConfigFromSchema = (schema, isre = false) => {
               code: option,
               name: option
             }));
-          }
+          } 
           break;
 
         case 'number':

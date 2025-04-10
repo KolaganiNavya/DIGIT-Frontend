@@ -8,8 +8,8 @@ import { generateConfigFromSchema } from "../../../utils/myutils/asssignutil";
 
 const MyAssign = () => {
 
-  const assconfig = generateConfigFromSchema(schema);
-  console.log(assconfig);
+  // const assconfig = generateConfigFromSchema(schema);
+  // console.log(assconfig);
 
   const tenantId = Digit.ULBService.getCurrentTenantId();
 
